@@ -40,3 +40,28 @@ square.addActionListener(frame.new SquareActionListener());
 
 JMenu help = new JMenu("Help"); 
 menu.add(help);
+
+frame.setLocationRelativeTo(null);
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+frame.setSize(1007, 859);
+frame.setTitle("Game of Life");
+frame.setVisible(true);
+frame.setResizable(false);
+} 
+
+class ArrowActionListener implements ActionListener
+{
+public void actionPerformed(ActionEvent e) 
+{
+world.setArrow();
+}
+}
+
+class SquareActionListener implements ActionListener
+{
+public void actionPerformed(ActionEvent e) 
+{
+world.setSquare();
+}
+} 
+}
